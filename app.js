@@ -19,7 +19,7 @@ function agregarAmigo() {
     // 4. Limpiar el campo de entrada
     inputAmigo.value = ""; // Restablecer el campo de texto a una cadena vacía
 
-    // 5. Actualizar la lista visual (opcional, si ya tienes una función para esto)
+    // 5. Actualizar la lista visual 
     actualizarListaAmigos();
 }
 // Función para actualizar la lista de amigos en el HTML
