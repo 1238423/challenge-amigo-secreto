@@ -1,5 +1,4 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-// Array para almacenar los nombres de los amigos.
 let amigos = [];
 
 // Función para agregar un amigo a la lista
@@ -22,4 +21,24 @@ function agregarAmigo() {
 
     // 5. Actualizar la lista visual (opcional, si ya tienes una función para esto)
     actualizarListaAmigos();
+}
+// Función para actualizar la lista de amigos en el HTML
+function actualizarListaAmigos() {
+    // 1. Obtener el elemento de la lista
+    const listaAmigos = document.getElementById('listaAmigos');
+
+    // 2. Limpiar la lista existente
+    listaAmigos.innerHTML = "";
+
+    // 3. Crear una cadena de texto con todos los <li>
+    let listaHTML = ""; // Variable para almacenar el HTML de la lista
+
+    // 4. Iterar sobre el arreglo amigos usando un ciclo for
+    for (let i = 0; i < amigos.length; i++) {
+        // 5. Agregar cada nombre como un <li> a la cadena de texto
+        listaHTML += `<li>${amigos[i]}</li>`;
+    }
+
+    // 6. Asignar la cadena de texto al innerHTML de la lista
+    listaAmigos.innerHTML = listaHTML;
 }
